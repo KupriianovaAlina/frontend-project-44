@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 import askUser from '../src/cli.js';
+import isNumberEvenGame from './bin-event.js';
 
 console.log('Welcome to the Brain Games!');
-askUser();
+const userName = askUser();
+
+isNumberEvenGame(userName);
