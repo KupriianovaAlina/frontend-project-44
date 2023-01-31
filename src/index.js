@@ -3,6 +3,7 @@ import readlineSync from 'readline-sync';
 import askUser from './cli.js';
 import isEvenGame from './games/brain-event.js';
 import calcGame from './games/brain-calc.js';
+import gcdGame from './games/brain-gcd.js';
 
 function checkAnswer(rightAnswer, userAnswer, userName) {
   // ответ верный
@@ -29,6 +30,10 @@ export const play = (gameName) => {
     case 'even':
       console.log('Answer "yes" if the number is even, otherwise answer "no".');
       game = isEvenGame;
+      break;
+    case 'gcd':
+      console.log('Find the greatest common divisor of given numbers.');
+      game = gcdGame;
       break;
     default:
       return undefined;
