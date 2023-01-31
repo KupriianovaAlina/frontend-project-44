@@ -5,6 +5,7 @@ import isEvenGame from './games/brain-event.js';
 import calcGame from './games/brain-calc.js';
 import gcdGame from './games/brain-gcd.js';
 import progressionGame from './games/brain-progression.js';
+import primeGame from './games/brain-prime.js';
 
 function checkAnswer(rightAnswer, userAnswer, userName) {
   // ответ верный
@@ -39,6 +40,10 @@ export default function play(gameName) {
     case 'progression':
       console.log('What number is missing in the progression?');
       game = progressionGame;
+      break;
+    case 'prime':
+      console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+      game = primeGame;
       break;
     default:
       return undefined;
