@@ -14,7 +14,7 @@ export default function gcdGame() {
   const emptyIndex = Math.round(Math.random() * 10);
 
   const rightAnswer = progression[emptyIndex];
-  progression[emptyIndex] = '...';
+  progression[emptyIndex] = '..';
 
   console.log(`Question: ${progression.join(' ')} `);
 
