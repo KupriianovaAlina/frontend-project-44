@@ -17,5 +17,5 @@ export default function gcdGame() {
 
   const rightAnswer = x + y;
 
-  return rightAnswer; св
+  return rightAnswer;
 }

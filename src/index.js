@@ -1,9 +1,10 @@
-/* eslint-disable import/prefer-default-export */
+/* eslint-disable consistent-return */
 import readlineSync from 'readline-sync';
 import askUser from './cli.js';
 import isEvenGame from './games/brain-event.js';
 import calcGame from './games/brain-calc.js';
 import gcdGame from './games/brain-gcd.js';
+import progressionGame from './games/brain-progression.js';
 
 function checkAnswer(rightAnswer, userAnswer, userName) {
   // ответ верный
@@ -16,7 +17,7 @@ function checkAnswer(rightAnswer, userAnswer, userName) {
   return false;
 }
 
-export const play = (gameName) => {
+export default function play(gameName) {
   console.log('Welcome to the Brain Games!');
   const userName = askUser();
 
@@ -35,6 +36,10 @@ export const play = (gameName) => {
       console.log('Find the greatest common divisor of given numbers.');
       game = gcdGame;
       break;
+    case 'progression':
+      console.log('What number is missing in the progression?');
+      game = progressionGame;
+      break;
     default:
       return undefined;
   }
@@ -51,4 +56,4 @@ export const play = (gameName) => {
   }
 
   if (noMistake) console.log(`Congratulations, ${userName}!`);
-};
+}
