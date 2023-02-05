@@ -1,5 +1,7 @@
+import getRandomNumber from '../utils.js';
+
 export default function primeGame() {
-  const randomNumber = Math.round(Math.random() * 100) + 1;
+  const randomNumber = getRandomNumber(100);
   console.log(`Question: ${randomNumber}`);
 
   let sumOfDividers = 0;

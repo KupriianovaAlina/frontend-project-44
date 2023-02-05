@@ -1,17 +1,26 @@
-export default function gcdGame() {
+import getRandomNumber from '../utils.js';
+
+function makeProgression() {
   const progression = [];
 
   // генерируем a1 арифметической прогрессии
-  progression[0] = Math.round(Math.random() * 100) + 1;
+  progression[0] = getRandomNumber(100);
+
   // генерируем разность арифметической прогрессии
-  const diff = Math.round(Math.random() * 10) + 1;
+  const diff = getRandomNumber(10);
 
   for (let i = 1; i < 11; i += 1) {
     progression[i] = progression[i - 1] + diff;
   }
 
+  return progression;
+}
+
+export default function gcdGame() {
+  const progression = makeProgression();
+
   // генерируем позицию пропуска
-  const emptyIndex = Math.round(Math.random() * 10);
+  const emptyIndex = getRandomNumber(10);
 
   const rightAnswer = progression[emptyIndex];
   progression[emptyIndex] = '..';

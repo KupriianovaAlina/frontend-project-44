@@ -1,9 +1,6 @@
-export default function gcdGame() {
-  const randomNumber1 = Math.round(Math.random() * 100) + 1;
-  const randomNumber2 = Math.round(Math.random() * 100) + 1;
+import getRandomNumber from '../utils.js';
 
-  console.log(`Question: ${randomNumber1} ${randomNumber2}`);
-
+function getGcd(randomNumber1, randomNumber2) {
   let x = randomNumber1;
   let y = randomNumber2;
 
@@ -15,7 +12,15 @@ export default function gcdGame() {
     }
   }
 
-  const rightAnswer = x + y;
+  return x + y;
+}
 
+export default function gcdGame() {
+  const randomNumber1 = getRandomNumber(100);
+  const randomNumber2 = getRandomNumber(100);
+
+  console.log(`Question: ${randomNumber1} ${randomNumber2}`);
+
+  const rightAnswer = getGcd(randomNumber1, randomNumber2);
   return rightAnswer;
 }

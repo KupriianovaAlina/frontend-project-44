@@ -1,5 +1,7 @@
+import getRandomNumber from '../utils.js';
+
 export default function isEvenGame() {
-  const randomNumber = Math.round(Math.random() * 100) + 1;
+  const randomNumber = getRandomNumber(100);
   console.log(`Question: ${randomNumber}`);
 
   const isEven = randomNumber % 2 === 0;

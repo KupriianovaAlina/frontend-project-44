@@ -1,6 +1,8 @@
+import getRandomNumber from '../utils.js';
+
 export default function calcGame() {
-  const randomNumber1 = Math.round(Math.random() * 100) + 1;
-  const randomNumber2 = Math.round(Math.random() * 100) + 1;
+  const randomNumber1 = getRandomNumber(100);
+  const randomNumber2 = getRandomNumber(100);
 
   const mathOperations = [
     (n1, n2) => n1 * n2,
