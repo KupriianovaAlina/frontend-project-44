@@ -19,8 +19,8 @@ export default function gcdGame() {
   const randomNumber1 = getRandomNumber(100);
   const randomNumber2 = getRandomNumber(100);
 
-  console.log(`Question: ${randomNumber1} ${randomNumber2}`);
+  const questionText = `${randomNumber1} ${randomNumber2}`;
 
   const rightAnswer = getGcd(randomNumber1, randomNumber2);
-  return rightAnswer;
+  return [rightAnswer, questionText];
 }

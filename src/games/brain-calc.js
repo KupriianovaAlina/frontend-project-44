@@ -13,9 +13,8 @@ export default function calcGame() {
   const operators = ['*', '+', '-'];
   const randomOperation = Math.floor(Math.random() * operators.length);
 
-  console.log(`Question: ${randomNumber1} ${operators[randomOperation]} ${randomNumber2}`);
-
+  const questionText = `${randomNumber1} ${operators[randomOperation]} ${randomNumber2}`;
   const rightAnswer = mathOperations[randomOperation](randomNumber1, randomNumber2);
 
-  return rightAnswer;
+  return [rightAnswer, questionText];
 }

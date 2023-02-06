@@ -25,7 +25,7 @@ export default function gcdGame() {
   const rightAnswer = progression[emptyIndex];
   progression[emptyIndex] = '..';
 
-  console.log(`Question: ${progression.join(' ')} `);
+  const questionText = `${progression.join(' ')} `;
 
-  return rightAnswer;
+  return [rightAnswer, questionText];
 }

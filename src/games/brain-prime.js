@@ -2,7 +2,7 @@ import getRandomNumber from '../utils.js';
 
 export default function primeGame() {
   const randomNumber = getRandomNumber(100);
-  console.log(`Question: ${randomNumber}`);
+  const questionText = `${randomNumber}`;
 
   let sumOfDividers = 0;
 
@@ -13,5 +13,5 @@ export default function primeGame() {
   const isPrime = sumOfDividers === randomNumber + 1;
   const rightAnswer = isPrime ? 'yes' : 'no';
 
-  return rightAnswer;
+  return [rightAnswer, questionText];
 }
