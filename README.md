@@ -17,6 +17,7 @@
 1. make brain-games (запустит приветствие)
 Демонстрация: https://asciinema.org/connect/60556ff9-878e-4149-927f-0c1aa356a8ec
 2. make brain-calc (запустит игру "Калькулятор")
+Демонстрация: https://asciinema.org/connect/60556ff9-878e-4149-927f-0c1aa356a8ec
 3. make brain-gcd (запустит игру "Поиск НОД")
 4. make brain-prime (запустит игру "Проверка на простое число")
 5. make brain-progression (запустит игру "Заполнение пропуска в арифметической прогрессии")
