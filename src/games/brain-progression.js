@@ -9,7 +9,7 @@ function makeProgression() {
   // генерируем разность арифметической прогрессии
   const diff = getRandomNumber(10);
 
-  for (let i = 1; i < 11; i += 1) {
+  for (let i = 1; i < 10; i += 1) {
     progression[i] = progression[i - 1] + diff;
   }
 
@@ -20,7 +20,7 @@ export default function gcdGame() {
   const progression = makeProgression();
 
   // генерируем позицию пропуска
-  const emptyIndex = getRandomNumber(10);
+  const emptyIndex = getRandomNumber(10) - 1;
 
   const rightAnswer = progression[emptyIndex];
   progression[emptyIndex] = '..';
