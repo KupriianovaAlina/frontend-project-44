@@ -1,20 +1,38 @@
 import getRandomNumber from '../utils.js';
+import runGame from '../index.js';
 
-export default function calcGame() {
-  const randomNumber1 = getRandomNumber(100);
-  const randomNumber2 = getRandomNumber(100);
+const description = 'What is the result of the expression?';
 
-  const mathOperations = [
-    (n1, n2) => n1 * n2,
-    (n1, n2) => n1 + n2,
-    (n1, n2) => n1 - n2,
-  ];
-
+const getRandomOperationSymbol = () => {
   const operators = ['*', '+', '-'];
-  const randomOperation = Math.floor(Math.random() * operators.length);
+  const randomOperation = operators[Math.floor(Math.random() * operators.length)];
+  return randomOperation;
+};
 
-  const questionText = `${randomNumber1} ${operators[randomOperation]} ${randomNumber2}`;
-  const rightAnswer = mathOperations[randomOperation](randomNumber1, randomNumber2);
+const calculateOperations = (symbol, firstValue, secondValue) => {
+  switch (symbol) {
+    case '+':
+      return firstValue + secondValue;
+    case '-':
+      return firstValue - secondValue;
+    case '*':
+      return firstValue * secondValue;
+    default:
+      return null;
+  }
+};
+
+const getQuestionAndAnswer = () => {
+  const randomSymbol = getRandomOperationSymbol();
+  const firstNumber = getRandomNumber(0, 100);
+  const secondNumber = getRandomNumber(0, 100);
+
+  const questionText = `${firstNumber} ${randomSymbol} ${secondNumber}`;
+  const rightAnswer = String(calculateOperations(randomSymbol, firstNumber, secondNumber));
 
   return [rightAnswer, questionText];
-}
+};
+
+export default () => {
+  runGame(description, getQuestionAndAnswer);
+};

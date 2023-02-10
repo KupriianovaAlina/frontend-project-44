@@ -1,3 +1,3 @@
-export default function getRandomNumber(multiplier) {
-  return Math.floor(Math.random() * multiplier) + 1;
+export default function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }

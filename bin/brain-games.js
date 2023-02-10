@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import play from '../src/index.js';
+import sayHi from '../src/cli.js';
 
-play();
+sayHi();

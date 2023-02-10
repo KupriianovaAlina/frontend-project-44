@@ -1,11 +1,19 @@
 import getRandomNumber from '../utils.js';
+import runGame from '../index.js';
 
-export default function isEvenGame() {
-  const randomNumber = getRandomNumber(100);
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const isEven = (num) => num % 2 === 0;
+
+const getQuestionAndAnswer = () => {
+  const randomNumber = getRandomNumber(1, 100);
   const questionText = `${randomNumber}`;
 
-  const isEven = randomNumber % 2 === 0;
-  const rightAnswer = isEven ? 'yes' : 'no';
+  const rightAnswer = isEven(randomNumber) ? 'yes' : 'no';
 
   return [rightAnswer, questionText];
-}
+};
+
+export default () => {
+  runGame(description, getQuestionAndAnswer);
+};

@@ -1,7 +1,10 @@
 import getRandomNumber from '../utils.js';
+import runGame from '../index.js';
 
-export default function primeGame() {
-  const randomNumber = getRandomNumber(100);
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const getQuestionAndAnswer = () => {
+  const randomNumber = getRandomNumber(1, 100);
   const questionText = `${randomNumber}`;
 
   let sumOfDividers = 0;
@@ -14,4 +17,8 @@ export default function primeGame() {
   const rightAnswer = isPrime ? 'yes' : 'no';
 
   return [rightAnswer, questionText];
-}
+};
+
+export default () => {
+  runGame(description, getQuestionAndAnswer);
+};
