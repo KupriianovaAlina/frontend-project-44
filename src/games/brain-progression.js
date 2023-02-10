@@ -23,7 +23,7 @@ const getQuestionAndAnswer = () => {
   const progression = makeProgression();
 
   // генерируем позицию пропуска
-  const emptyIndex = getRandomNumber(0, 10);
+  const emptyIndex = getRandomNumber(0, 9);
 
   const rightAnswer = progression[emptyIndex];
   progression[emptyIndex] = '..';
