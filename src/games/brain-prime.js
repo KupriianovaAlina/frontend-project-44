@@ -3,6 +3,8 @@ import runGame from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
+const isPrime = (number, sumOfDividers) => sumOfDividers === number + 1;
+
 const getQuestionAndAnswer = () => {
   const randomNumber = getRandomNumber(1, 100);
   const questionText = `${randomNumber}`;
@@ -13,8 +15,7 @@ const getQuestionAndAnswer = () => {
     if (randomNumber % i === 0) sumOfDividers += i;
   }
 
-  const isPrime = sumOfDividers === randomNumber + 1;
-  const rightAnswer = isPrime ? 'yes' : 'no';
+  const rightAnswer = isPrime(randomNumber, sumOfDividers) ? 'yes' : 'no';
 
   return [rightAnswer, questionText];
 };
