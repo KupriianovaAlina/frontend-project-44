@@ -8,6 +8,7 @@ export default function play(description, getQuestionAndAnswer) {
   console.log('Welcome to the Brain Games!');
   const userName = askUser();
 
+  if (description === undefined) return;
   console.log(description);
 
   // три итерации, если ответ не верен - выход из цикла
