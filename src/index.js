@@ -1,17 +1,17 @@
 /* eslint-disable consistent-return */
 import readlineSync from 'readline-sync';
-import askUser from './cli.js';
 
 const countRounds = 3;
 
 export default function play(description, getQuestionAndAnswer) {
   console.log('Welcome to the Brain Games!');
-  const userName = askUser();
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
 
+  // нам нужна эта проверка, потому что при вызове brain-games здесь программа должна закончится
   if (description === undefined) return;
   console.log(description);
 
-  // три итерации, если ответ не верен - выход из цикла
   for (let i = 0; i < countRounds; i += 1) {
     const [rightAnswer, questionText] = getQuestionAndAnswer();
 

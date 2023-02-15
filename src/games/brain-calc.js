@@ -3,8 +3,7 @@ import runGame from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const getRandomOperationSymbol = () => {
-  const operators = ['*', '+', '-'];
+const getRandomOperationSymbol = (operators) => {
   const randomOperation = operators[Math.floor(Math.random() * operators.length)];
   return randomOperation;
 };
@@ -23,7 +22,8 @@ const calculateOperations = (symbol, firstValue, secondValue) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const randomSymbol = getRandomOperationSymbol();
+  const operators = ['*', '+', '-'];
+  const randomSymbol = getRandomOperationSymbol(operators);
   const firstNumber = getRandomNumber(0, 100);
   const secondNumber = getRandomNumber(0, 100);
 
