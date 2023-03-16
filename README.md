@@ -21,12 +21,17 @@
 Как использовать проект?
 Взаимодействие с проектом происходит посредством простых команд:
 1. make brain-games (запустит приветствие)
+
 Демонстрация: [![asciicast](https://asciinema.org/a/557611.svg)](https://asciinema.org/a/557611)
 2. make brain-calc (запустит игру "Калькулятор")
+
 Демонстрация: [![asciicast](https://asciinema.org/a/557870.svg)](https://asciinema.org/a/557870)
 3. make brain-gcd (запустит игру "Поиск НОД")
+
 Демонстрация: [![asciicast](https://asciinema.org/a/557874.svg)](https://asciinema.org/a/557874)
 4. make brain-prime (запустит игру "Проверка на простое число")
+
 Демонстрация: [![asciicast](https://asciinema.org/a/557878.svg)](https://asciinema.org/a/557878)
 5. make brain-progression (запустит игру "Заполнение пропуска в арифметической прогрессии")
+
 Демонстрация: [![asciicast](https://asciinema.org/a/557879.svg)](https://asciinema.org/a/557879)
